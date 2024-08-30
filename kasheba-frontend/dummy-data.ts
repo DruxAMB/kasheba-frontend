@@ -1,5 +1,5 @@
 export interface DataProp {
-    id: number;
+    id: string;
     name: string;
     nameTag: string;
     image: string;
@@ -21,7 +21,7 @@ export interface DataProp {
 
 const dummyData: DataProp[] = [
     {
-        id: 1,
+        id: '1',
         name: "New York City",
         nameTag: "NYC",
         image: "",
@@ -41,7 +41,7 @@ const dummyData: DataProp[] = [
         balance: "-"
     },
     {
-        id: 1,
+        id: '2',
         name: "Los Angeles",
         nameTag: "LAX",
         image: "",
@@ -61,7 +61,7 @@ const dummyData: DataProp[] = [
         balance: "-"
     },
     {
-        id: 1,
+        id: '3',
         name: "San Francisco",
         nameTag: "SFO",
         image: "",
@@ -81,7 +81,7 @@ const dummyData: DataProp[] = [
         balance: "-"
     },
     {
-        id: 1,
+        id: '4',
         name: "London",
         nameTag: "LON",
         image: "",
@@ -101,7 +101,7 @@ const dummyData: DataProp[] = [
         balance: "-"
     },
     {
-        id: 1,
+        id: '5',
         name: "Paris",
         nameTag: "PAR",
         image: "",
@@ -121,7 +121,7 @@ const dummyData: DataProp[] = [
         balance: "-"
     },
     {
-        id: 1,
+        id: '6',
         name: "New York City",
         nameTag: "NYC",
         image: "",

@@ -146,7 +146,7 @@ export function Cart() {
           <CardTitle className="font-semibold text-md ">Your Estimated Balance</CardTitle>
           
           <div className="flex gap-2 text-center">
-            <p className="m-auto font-bold text-accent">KSB</p>
+            <p className="m-auto font-bold text-[#757575;]">KSB</p>
             <h1 className="text-3xl font-bold">345,678.04</h1>
             <p className="m-auto">≈</p>
             <p className="m-auto">$45,678.33</p>
