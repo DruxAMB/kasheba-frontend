@@ -1,11 +1,12 @@
 import React from 'react'
+import { Cart } from './Chart'
+import { AllProjects } from './AllProjects'
 
-const dashboard = () => {
+export const Dashboard = () => {
   return (
     <div>
-      
+      <Cart />
+      <AllProjects />
     </div>
   )
 }
-
-export default dashboard
