@@ -3,10 +3,11 @@ import React from "react";
 import { FullChart } from "../FullChart";
 import ProjectImage from "../../../public/images/project-banner.png";
 import Image from "next/image";
+import BuyTrade from "../BuyTrade";
 
 export const ProjectDetails = ({ getData }: any) => {
   return (
-    <div className="grid grid-cols-5">
+    <div className="grid grid-cols-5 gap-10">
       <div className="grid gap-3 col-span-2 h-fit">
         <li className="name flex gap-2">
           {/* <Image src={getData.image} alt="image" height={28} width={28} /> */}
@@ -36,7 +37,7 @@ export const ProjectDetails = ({ getData }: any) => {
           </div>
         </div>
         <ul className="group grid grid-cols-5 py-6">
-          <li className="name gap-2 col-span-3 text-[#C9C9C9]">
+          <li className="name gap-2 col-span-4 text-[#C9C9C9]">
             <p className="text-lg border-b px-2 py-4">
               Total Market Value (TMV)
             </p>
@@ -50,11 +51,12 @@ export const ProjectDetails = ({ getData }: any) => {
           <li className="name gap-2">
             <p className="text-lg border-b px-2 py-4">${getData.tmv}T</p>
             <p className="text-lg border-b px-2 py-4">${getData.gdp}T</p>
-            <p className="text-lg border-b px-2 py-4">{getData.gap}T</p>
+            <p className="text-lg border-b px-2 py-4">${getData.gdp}T</p>
             <p className="text-lg border-b px-2 py-4">{getData.listing}/d</p>
             <p className="text-lg border-b px-2 py-4">94%</p>
           </li>
         </ul>
+        <BuyTrade getData={getData} />
       </div>
       <div className="about grid gap-5 col-span-3">
         <FullChart />
@@ -64,7 +66,9 @@ export const ProjectDetails = ({ getData }: any) => {
           <p className="text-lg text-[#C9C9C9]">{getData.aboutP}</p>
         </div>
         <div className="estate grid gap-3">
-          <p className="font-semibold text-xl">{getData.about}</p>
+          <p className="font-semibold text-xl">
+            NYC Real Estate Market Insights
+          </p>
           <div className="flex gap-5  border-b pb-5">
             <div>
               <p>4.1%</p>

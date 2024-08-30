@@ -78,7 +78,7 @@ export const NavBar = () => {
   return (
     <div
       id="navbar"
-      className="page-transition flex z-50 items-center justify-between p-5 px-4 md:px-10 lg:px-32 text-center text-black fixed w-full backdrop-blur-md"
+      className="page-transition flex z-50 items-center justify-between p-5 px-4 md:px-10 lg:px-32 text-center text-foreground fixed w-full backdrop-blur-md"
     >
       <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
         {isOpen && <X size={30} className="lg:hidden cursor-pointer z-40" />}
