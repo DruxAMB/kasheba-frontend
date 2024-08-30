@@ -15,14 +15,15 @@ export async function generateStaticParams() {
 const page = ({ params }: { params: { id: string } }) => {
   const { id } = params;
 
-  const getData = dummyData.find((data: DataProp) => data.nameTag === data.id );
+  const getData = dummyData.find((data: DataProp) => data.nameTag === id);
+
 
   if (!getData) {
     return notFound(); // Show a 404 page if the id doesn't match any bounty
   }
 
   return (
-    <div>
+    <div className='grid gap-2 p-5 pt-28 px-4 md:px-10 lg:px-32'>
       <ProjectDetails getData={getData} />
     </div>
   )

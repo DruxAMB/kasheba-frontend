@@ -1,12 +1,12 @@
 import React from "react";
-import { Cart } from "./Chart";
+import { Chart } from "./Chart";
 import { AllProjects } from "./AllProjects";
 import dummyData, { DataProp } from "@/dummy-data";
 
 export const Dashboard = () => {
   return (
     <div>
-      <Cart />
+      <Chart />
 
       <ul className="grid grid-cols-9 py-6">
         <li className="col-span-3">Name</li>
