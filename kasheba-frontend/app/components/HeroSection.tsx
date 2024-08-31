@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <div>
       <h1 className="text-[56px] text-center font-bold max-w-[710px] m-auto leading-snug">
-        Invest in Real Estate, Globally. Own the Future.
+        Invest in Real Estate, Globally Own the Future.
       </h1>
       <div className="relative">
         <p className="max-w-[638px] m-auto text-center absolute left-1/2 transform -translate-x-1/2">

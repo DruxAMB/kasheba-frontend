@@ -100,19 +100,19 @@ export const NavBar = () => {
       </Link>
       <ul className="flex gap-5 max-lg:hidden">
         <Link href={"/"}>
-          <li className="hover:underline font-thin">Products</li>
+          <li className="hover:underline font-light">Products</li>
         </Link>
         <Link href={"/"}>
-          <li className="hover:underline font-thin">Enterprise</li>
+          <li className="hover:underline font-light">Enterprise</li>
         </Link>{" "}
         <Link href={"/bounty"}>
-          <li className="hover:underline font-thin">Pricing</li>
+          <li className="hover:underline font-light">Pricing</li>
         </Link>
         <Link href={"/"}>
-          <li className="hover:underline font-thin">Resources</li>
+          <li className="hover:underline font-light">Resources</li>
         </Link>
         <Link href={"/"}>
-          <li className="hover:underline font-thin">About</li>
+          <li className="hover:underline font-light">About</li>
         </Link>
       </ul>
       <div className="items-center max-lg:hidden">
