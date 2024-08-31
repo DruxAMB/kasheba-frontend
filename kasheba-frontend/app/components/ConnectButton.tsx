@@ -48,12 +48,12 @@ const ConnectButton = () => {
   return (
     <div>
       {account ? (
-        <button onClick={disconnectWallet} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={disconnectWallet} className="bg-transparent hover:bg-[#24EACC] hover:text-slate-700 border text-black font-semibold py-2 px-4 rounded-3xl">
           Disconnect
         </button>
       ) : (
-        <button onClick={connectWallet} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Connect to MetaMask
+        <button onClick={connectWallet} className="bg-g-trbg-transparent hover:bg-[#24EACC] hover:text-slate-700 border text-black font-semibold py-2 px-4 rounded-3xl">
+          connect wallet
         </button>
       )}
       {error && <p className="text-red-500">{error}</p>}

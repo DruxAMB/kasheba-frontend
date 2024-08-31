@@ -34,8 +34,8 @@ export const NavBar = () => {
 
   const links = [
     {
-      name: "Products",
-      url: "/",
+      name: "Projects",
+      url: "/projects",
     },
     {
       name: "Enterprise",
@@ -102,26 +102,16 @@ export const NavBar = () => {
       <ul className="flex gap-5 max-lg:hidden">
         {links.map((link, index) => (
           <Link key={index} href={link.url}>
-            <li className="hover:underline font-thin">{link.name}</li>
+            <li className="hover:underline font-light">{link.name}</li>
           </Link>
         ))}
       </ul>
       <ul className="items-center lg:hidden">
-        <Link href={"/"}>
-          <li className="hover:underline font-light">Products</li>
-        </Link>
-        <Link href={"/"}>
-          <li className="hover:underline font-light">Enterprise</li>
-        </Link>{" "}
-        <Link href={"/bounty"}>
-          <li className="hover:underline font-light">Pricing</li>
-        </Link>
-        <Link href={"/"}>
-          <li className="hover:underline font-light">Resources</li>
-        </Link>
-        <Link href={"/"}>
-          <li className="hover:underline font-light">About</li>
-        </Link>
+        {links.map((link, index) => (
+          <Link key={index} href={link.url}>
+            <li className="hover:underline font-light">{link.name}</li>
+          </Link>
+        ))}
       </ul>
       <div className="items-center max-lg:hidden">
       

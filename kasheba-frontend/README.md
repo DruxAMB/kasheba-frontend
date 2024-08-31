@@ -66,13 +66,13 @@ Designed a user-friendly interface for users to view and trade city indexes.
 ### Accomplishments that we're proud of
 
 * Successfully creating a working prototype that demonstrates the concept of a decentralized real estate market speculation platform.
-* Integrating Chainlink oracles to securely fetch and display real estate data on the blockchain.
+* Integrating Chainlink oracles, theGraph and circles to securely fetch and display real estate data on the blockchain.
 * Developing a user-friendly interface that allows users to easily interact with the platform and trade city indexes.
 * Building a robust analytics engine capable of processing and analyzing real estate data in real-time.
 
 ### What we learned
 * The importance of accurate and timely data in creating reliable financial products.
-* How to leverage blockchain technology and Chainlink oracles to bring off-chain data onto the blockchain securely.
+* How to leverage blockchain technology to bring off-chain data onto the blockchain securely.
 * The complexities involved in integrating various data sources and ensuring their accuracy and reliability.
 * The potential of decentralized finance to create new and innovative financial products and markets.
 
