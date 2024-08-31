@@ -56,7 +56,7 @@ export const ProjectDetails = ({ getData }: any) => {
             <p className="text-lg border-b px-2 py-4">94%</p>
           </li>
         </ul>
-        <BuyTrade getData={getData} />
+        {/* <BuyTrade getData={getData} /> */}
       </div>
       <div className="about grid gap-5 col-span-3">
         <FullChart />

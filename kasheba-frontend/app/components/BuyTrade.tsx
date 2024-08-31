@@ -5,7 +5,7 @@ import SwapImage from "../../public/images/swap-image.png";
 import Image from "next/image";
 import axios from "axios"; // Import axios to make API calls
 import Web3 from "web3"; // Import Web3 for interacting with the smart contract
-import CityIndex from "../KashebaTrade
+// import CityIndex from "../KashebaTrade"
 
 const BuyTrade = ({ getData }: any) => {
   const [amount, setAmount] = useState(0);
