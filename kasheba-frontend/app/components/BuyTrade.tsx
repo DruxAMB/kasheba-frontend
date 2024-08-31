@@ -5,7 +5,7 @@ import SwapImage from "../../public/images/swap-image.png";
 import Image from "next/image";
 import axios from "axios"; // Import axios to make API calls
 import Web3 from "web3"; // Import Web3 for interacting with the smart contract
-import KashebaTrading from "../../app/KashebaTrade.json"; // Adjust path as necessary
+import CityIndex from "../KashebaTrade
 
 const BuyTrade = ({ getData }: any) => {
   const [amount, setAmount] = useState(0);
@@ -29,7 +29,7 @@ const BuyTrade = ({ getData }: any) => {
   const handleBuy = async () => {
     try {
       // Step 1: Create a payment request
-      const paymentResponse = await axios.post('http://localhost:5000/api/createPayment', {
+      const paymentResponse = await axios.post('https://api-sandbox.circle.com/v1/paymentIntents', {
         amount: amount.toString(), // Convert to string if necessary
         currency: 'USD', // Specify the currency
       });
@@ -37,12 +37,12 @@ const BuyTrade = ({ getData }: any) => {
       // Assuming the payment is successful, proceed to mint tokens
       const web3 = new Web3(window.ethereum);
       const contract = new web3.eth.Contract(
-        KashebaTrading.abi,
-        "YOUR_CONTRACT_ADDRESS" // Replace with your contract address
+        CityIndex,
+        "0xe4dFcD8642913C73b0BC3140130b43aa132d1de9" // Replace with your contract address
       );
 
       // Call the mint function
-      const tx = await contract.methods.mintKashebaToken(account, amount).send({ from: account });
+      const tx = await contract.methods.buy(account, amount).send({ from: account });
       console.log("Tokens minted successfully:", tx);
     } catch (err) {
       setError(err.message);
