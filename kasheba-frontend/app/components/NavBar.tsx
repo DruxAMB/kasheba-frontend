@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/images/logo.png";
 import { MenuIcon, X } from "lucide-react";
+import ConnectButton from './ConnectButton'; // Import the ConnectButton component
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,6 +54,7 @@ export const NavBar = () => {
       url: "/",
     },
   ];
+
   const navLinks = () => {
     return (
       <ul className="flex gap-2 lg:gap-5 flex-col md:flex-row">
@@ -62,14 +64,12 @@ export const NavBar = () => {
             className="hover:bg-gray-600/50 px-2 rounded-lg hover:text-white"
           >
             <Link href={link.url}>
-              <p className="">{link.name}</p>
+              <p>{link.name}</p>
             </Link>
           </li>
         ))}
         <li className="block xs:hidden hover:bg-gray-600/50 px-2 rounded-lg hover:text-white">
-          <Link className="" href={"/projects"}>
-            <p className="">Login</p>
-          </Link>
+          <ConnectButton /> 
         </li>
       </ul>
     );
@@ -81,8 +81,9 @@ export const NavBar = () => {
       className="page-transition flex z-50 items-center justify-between p-5 px-4 md:px-10 lg:px-32 text-center text-background fixed w-full backdrop-blur-md"
     >
       <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
-        {isOpen && <X size={30} className="lg:hidden cursor-pointer z-40" />}
-        {!isOpen && (
+        {isOpen ? (
+          <X size={30} className="lg:hidden cursor-pointer z-40" />
+        ) : (
           <MenuIcon size={30} className="lg:hidden cursor-pointer z-40" />
         )}
       </button>
@@ -99,6 +100,13 @@ export const NavBar = () => {
         </h1>
       </Link>
       <ul className="flex gap-5 max-lg:hidden">
+        {links.map((link, index) => (
+          <Link key={index} href={link.url}>
+            <li className="hover:underline font-thin">{link.name}</li>
+          </Link>
+        ))}
+      </ul>
+      <div className="items-center max-lg:hidden">
         <Link href={"/"}>
           <li className="hover:underline font-light">Products</li>
         </Link>
@@ -116,11 +124,8 @@ export const NavBar = () => {
         </Link>
       </ul>
       <div className="items-center max-lg:hidden">
-        <Link href={"/projects"}>
-          <p className="page-transition bg-baseblue hover:bg-transparent border border-black rounded-full py-2 px-6 text-xs flex">
-            Login
-          </p>
-        </Link>
+      
+        <ConnectButton /> {/* Add ConnectButton here for larger screens */}
       </div>
     </div>
   );
