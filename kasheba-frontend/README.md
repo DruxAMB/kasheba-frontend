@@ -12,6 +12,20 @@ Kasheba Analytics is a decentralized marketplace where users can speculate on re
 ### How we built it
 We built Kasheba Analytics using a combination of blockchain technology, Chainlink oracles, Circle, Graph and web3js. Here's a high-level overview of the process:
 
+#### Data Collection:
+ We identified key real estate metrics necessary for creating city indexes, including property prices, rental information, and demographic indicators. For the hackathon, we hardcoded random data to simulate real-world inputs.
+
+#### Analytics API: 
+Developed an API to collate and process the collected data, providing a standardized format for the analytics engine.
+
+
+#### Chainlink Oracles: 
+Integrated Chainlink oracles to fetch data from our off-chain analytics API and bring it onto the blockchain securely.
+#### Smart Contracts: 
+Created smart contracts to handle data requests and store city index prices on the blockchain.
+#### Frontend: 
+Designed a user-friendly interface for users to view and trade city indexes.
+
 ## Why Use Circle?
 1. USDC Integration: Circle provides a seamless way to integrate USDC, a stablecoin pegged to the US dollar, into the Kasheba Analytics platform. By using Circle's services, Kasheba can ensure that all transactions on the platform are conducted in a stable, secure, and globally accepted digital currency.
 Trusted Infrastructure: Circle offers a reliable and secure infrastructure for handling digital payments, which is essential for a platform like Kasheba that deals with real-time transactions and financial data.
@@ -43,20 +57,6 @@ Circle SDK: Integrated for handling USDC transactions, providing a stable and se
 React & Next.js: The frontend is built using React and Next.js, offering a dynamic and user-friendly interface for interacting with the platform.
 Node.js: The backend is powered by Node.js, managing the API interactions, data processing, and smart contract communications.
 Solidity: Smart contracts are written in Solidity to manage the logic for trading city indexes and handling payments.
-
-#### Data Collection:
- We identified key real estate metrics necessary for creating city indexes, including property prices, rental information, and demographic indicators. For the hackathon, we hardcoded random data to simulate real-world inputs.
-
-#### Analytics API: 
-Developed an API to collate and process the collected data, providing a standardized format for the analytics engine.
-
-
-#### Chainlink Oracles: 
-Integrated Chainlink oracles to fetch data from our off-chain analytics API and bring it onto the blockchain securely.
-#### Smart Contracts: 
-Created smart contracts to handle data requests and store city index prices on the blockchain.
-#### Frontend: 
-Designed a user-friendly interface for users to view and trade city indexes.
 
 ### Challenges we ran into
 * Data Integration: Aggregating real estate data from multiple sources and ensuring its accuracy was a complex task.
