@@ -14,7 +14,7 @@ export const AllProjects = ({ data }: any) => {
         >
           <li className="name flex gap-2 col-span-3">
             {/* <Image src={data.image} alt="image" height={28} width={28} /> */}
-            <div className="w-[28px] h-[28px] bg-green-300 rounded-full"></div>
+            <div className={`w-[28px] h-[28px] ${data.image} rounded-full`}></div>
             <p className="text-lg">{data.name}</p>
             <p className="bg-input bg-opacity-25 rounded-3xl px-3 text-xs font-light group-hover:bg-[#24EACC] group-hover:text-black py-1 h-fit">
               {data.nameTag}

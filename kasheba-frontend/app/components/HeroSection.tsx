@@ -5,7 +5,7 @@ import HeroImage from "../../public/images/hero-image.png";
 const HeroSection = () => {
   return (
     <div>
-      <h1 className="text-[56px] text-center font-bold max-w-[688px] m-auto leading-snug">
+      <h1 className="text-[56px] text-center font-bold max-w-[710px] m-auto leading-snug">
         Invest in Real Estate, Globally. Own the Future.
       </h1>
       <div className="relative">

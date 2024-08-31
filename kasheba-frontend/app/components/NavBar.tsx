@@ -67,7 +67,7 @@ export const NavBar = () => {
           </li>
         ))}
         <li className="block xs:hidden hover:bg-gray-600/50 px-2 rounded-lg hover:text-white">
-          <Link className="" href={"/"}>
+          <Link className="" href={"/projects"}>
             <p className="">Login</p>
           </Link>
         </li>
@@ -78,7 +78,7 @@ export const NavBar = () => {
   return (
     <div
       id="navbar"
-      className="page-transition flex z-50 items-center justify-between p-5 px-4 md:px-10 lg:px-32 text-center text-foreground fixed w-full backdrop-blur-md"
+      className="page-transition flex z-50 items-center justify-between p-5 px-4 md:px-10 lg:px-32 text-center text-background fixed w-full backdrop-blur-md"
     >
       <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
         {isOpen && <X size={30} className="lg:hidden cursor-pointer z-40" />}
@@ -116,7 +116,7 @@ export const NavBar = () => {
         </Link>
       </ul>
       <div className="items-center max-lg:hidden">
-        <Link href={"/create-profile"}>
+        <Link href={"/projects"}>
           <p className="page-transition bg-baseblue hover:bg-transparent border border-black rounded-full py-2 px-6 text-xs flex">
             Login
           </p>

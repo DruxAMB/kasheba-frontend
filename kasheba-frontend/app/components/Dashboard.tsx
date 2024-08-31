@@ -18,7 +18,7 @@ export const Dashboard = () => {
         <li>Balance</li>
       </ul>
       {dummyData.map((data: DataProp) => {
-        return <AllProjects data={data} />;
+        return <AllProjects key={data.id} data={data} />;
       })}
     </div>
   );
