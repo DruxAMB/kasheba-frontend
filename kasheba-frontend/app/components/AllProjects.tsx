@@ -9,7 +9,6 @@ export const AllProjects = ({ data }: any) => {
     <div>
       <Link href={dynamicHref}>
         <ul
-          key={data.id}
           className="group grid grid-cols-9 py-6 border-b text-[#757575] hover:bg-input font-semibold cursor-pointer"
         >
           <li className="name flex gap-2 col-span-3">

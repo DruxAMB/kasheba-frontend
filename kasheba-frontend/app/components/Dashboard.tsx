@@ -3,7 +3,8 @@ import { Chart } from "./Chart";
 import { AllProjects } from "./AllProjects";
 import dummyData, { DataProp } from "@/dummy-data";
 
-export const Dashboard = () => {
+export const Dashboard = () => {  
+
   return (
     <div>
       <Chart />
