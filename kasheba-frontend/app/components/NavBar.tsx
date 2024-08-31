@@ -106,7 +106,7 @@ export const NavBar = () => {
           </Link>
         ))}
       </ul>
-      <div className="items-center max-lg:hidden">
+      <ul className="items-center lg:hidden">
         <Link href={"/"}>
           <li className="hover:underline font-light">Products</li>
         </Link>

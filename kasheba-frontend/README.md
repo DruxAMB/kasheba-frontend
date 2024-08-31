@@ -10,7 +10,39 @@ Kasheba Analytics is a decentralized marketplace where users can speculate on re
 
 
 ### How we built it
-We built Kasheba Analytics using a combination of blockchain technology, Chainlink oracles, and a robust backend system. Here's a high-level overview of the process:
+We built Kasheba Analytics using a combination of blockchain technology, Chainlink oracles, Circle, Graph and web3js. Here's a high-level overview of the process:
+
+## Why Use Circle?
+1. USDC Integration: Circle provides a seamless way to integrate USDC, a stablecoin pegged to the US dollar, into the Kasheba Analytics platform. By using Circle's services, Kasheba can ensure that all transactions on the platform are conducted in a stable, secure, and globally accepted digital currency.
+Trusted Infrastructure: Circle offers a reliable and secure infrastructure for handling digital payments, which is essential for a platform like Kasheba that deals with real-time transactions and financial data.
+Scalability and Compliance: Circle’s platform is built for scale and regulatory compliance, ensuring that Kasheba can grow and operate within legal frameworks, especially in handling financial transactions.
+2. How Did We Implement Circle?
+Installation of Circle SDK: We began by installing the Circle SDK using the command:
+bash
+Copy code
+npm install @circleco/headless-server-sdk
+Client Creation: We then created a client using the SDK by importing createClient and initializing it with the app token provided by Circle:
+javascript
+Copy code
+import { createClient } from "@circleco/headless-server-sdk";
+
+const client = createClient({
+  appToken: "YourAppTokenHere",
+});
+Transaction Handling: The Circle SDK was integrated into the smart contracts and backend to handle USDC deposits, withdrawals, and transactions securely. This allowed us to process payments and trades using USDC within the Kasheba platform.
+Smart Contract Update: The smart contracts were modified to accept USDC as the primary currency for trading city indexes and managing payouts.
+3. What Is the Next Plan for the Project?
+Enhanced Data Integration: The next step is to integrate real-time and more extensive datasets from various real estate sources to improve the accuracy and relevance of the city indexes.
+Platform Scaling: We plan to scale the platform to support more users and cities, potentially expanding beyond real estate to other market sectors.
+Additional Payment Methods: Exploring the integration of additional stablecoins or payment options to provide users with more flexibility in funding their accounts and withdrawing earnings.
+Security Audits: Conduct thorough security audits to ensure the platform’s robustness against potential vulnerabilities, especially concerning financial transactions.
+4. What Technologies Did We Use?
+Blockchain: The core platform is built on Ethereum, leveraging smart contracts to handle trades and data storage securely.
+Chainlink Oracles: Used to bring off-chain real estate data onto the blockchain, ensuring that the data used for city indexes is accurate and up-to-date.
+Circle SDK: Integrated for handling USDC transactions, providing a stable and secure currency option for users.
+React & Next.js: The frontend is built using React and Next.js, offering a dynamic and user-friendly interface for interacting with the platform.
+Node.js: The backend is powered by Node.js, managing the API interactions, data processing, and smart contract communications.
+Solidity: Smart contracts are written in Solidity to manage the logic for trading city indexes and handling payments.
 
 #### Data Collection:
  We identified key real estate metrics necessary for creating city indexes, including property prices, rental information, and demographic indicators. For the hackathon, we hardcoded random data to simulate real-world inputs.
