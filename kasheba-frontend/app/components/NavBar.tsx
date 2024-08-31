@@ -69,7 +69,13 @@ export const NavBar = () => {
           </li>
         ))}
         <li className="block xs:hidden hover:bg-gray-600/50 px-2 rounded-lg hover:text-white">
+<<<<<<< HEAD
           <ConnectButton /> 
+=======
+          <Link className="" href={"/projects"}>
+            <p className="">Login</p>
+          </Link>
+>>>>>>> d0302644154d96f015e1d0a60cce496c5d5843d9
         </li>
       </ul>
     );
@@ -78,7 +84,7 @@ export const NavBar = () => {
   return (
     <div
       id="navbar"
-      className="page-transition flex z-50 items-center justify-between p-5 px-4 md:px-10 lg:px-32 text-center text-foreground fixed w-full backdrop-blur-md"
+      className="page-transition flex z-50 items-center justify-between p-5 px-4 md:px-10 lg:px-32 text-center text-background fixed w-full backdrop-blur-md"
     >
       <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
         {isOpen ? (
@@ -100,6 +106,7 @@ export const NavBar = () => {
         </h1>
       </Link>
       <ul className="flex gap-5 max-lg:hidden">
+<<<<<<< HEAD
         {links.map((link, index) => (
           <Link key={index} href={link.url}>
             <li className="hover:underline font-thin">{link.name}</li>
@@ -108,6 +115,30 @@ export const NavBar = () => {
       </ul>
       <div className="items-center max-lg:hidden">
         <ConnectButton /> {/* Add ConnectButton here for larger screens */}
+=======
+        <Link href={"/"}>
+          <li className="hover:underline font-light">Products</li>
+        </Link>
+        <Link href={"/"}>
+          <li className="hover:underline font-light">Enterprise</li>
+        </Link>{" "}
+        <Link href={"/bounty"}>
+          <li className="hover:underline font-light">Pricing</li>
+        </Link>
+        <Link href={"/"}>
+          <li className="hover:underline font-light">Resources</li>
+        </Link>
+        <Link href={"/"}>
+          <li className="hover:underline font-light">About</li>
+        </Link>
+      </ul>
+      <div className="items-center max-lg:hidden">
+        <Link href={"/projects"}>
+          <p className="page-transition bg-baseblue hover:bg-transparent border border-black rounded-full py-2 px-6 text-xs flex">
+            Login
+          </p>
+        </Link>
+>>>>>>> d0302644154d96f015e1d0a60cce496c5d5843d9
       </div>
     </div>
   );

@@ -3,7 +3,8 @@ import { Chart } from "./Chart";
 import { AllProjects } from "./AllProjects";
 import dummyData, { DataProp } from "@/dummy-data";
 
-export const Dashboard = () => {
+export const Dashboard = () => {  
+
   return (
     <div>
       <Chart />
@@ -18,7 +19,7 @@ export const Dashboard = () => {
         <li>Balance</li>
       </ul>
       {dummyData.map((data: DataProp) => {
-        return <AllProjects data={data} />;
+        return <AllProjects key={data.id} data={data} />;
       })}
     </div>
   );
